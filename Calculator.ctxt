@@ -2,4 +2,6 @@
 comment0.target=Calculator
 comment1.params=arg1\ arg2
 comment1.target=int\ add(int,\ int)
-numComments=2
+comment2.params=arg1\ arg2
+comment2.target=int\ subtract(int,\ int)
+numComments=3
