@@ -2,4 +2,6 @@
 comment0.target=CalculatorTest
 comment1.params=
 comment1.target=void\ add()
-numComments=2
+comment2.params=
+comment2.target=void\ adddWithDifferentArguments()
+numComments=3

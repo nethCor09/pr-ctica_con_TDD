@@ -10,4 +10,11 @@ public class CalculatorTest {
         int result = calculator.add(2, 2);
         assertEquals(4, result);
     }
+    
+    @Test
+    public void addWithDifferentArguments() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(2, 5);
+        assertEquals(7, result);
+    }
 }
