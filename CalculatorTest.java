@@ -4,16 +4,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
+    private Calculator calculator;
+    @BeforeEach
+    public void setUp() {
+        calculator = new Calculator();
+    }
     @Test
     public void add() {
-        Calculator calculator = new Calculator();
         int result = calculator.add(2, 2);
         assertEquals(4, result);
     }
     
     @Test
     public void addWithDifferentArguments() {
-        Calculator calculator = new Calculator();
         int result = calculator.add(2, 5);
         assertEquals(7, result);
     }
