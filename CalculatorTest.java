@@ -9,6 +9,7 @@ public class CalculatorTest {
     public void setUp() {
         calculator = new Calculator();
     }
+    
     @Test
     public void add() {
         int result = calculator.add(2, 2);
@@ -19,5 +20,10 @@ public class CalculatorTest {
     public void addWithDifferentArguments() {
         int result = calculator.add(2, 5);
         assertEquals(7, result);
+    }
+    
+    public void subtract() {
+        int result = calculator.subtract(5, 3);
+        assertEquals(2, result);
     }
 }
