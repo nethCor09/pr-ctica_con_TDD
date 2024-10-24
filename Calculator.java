@@ -3,7 +3,7 @@ public class Calculator {
         return arg1 + arg2;
     }
     
-    public int subtract(int arg1, int arg2) {
+    public int substract(int arg1, int arg2) {
         return 2;
     }
 }

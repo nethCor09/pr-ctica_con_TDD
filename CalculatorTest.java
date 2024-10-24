@@ -23,9 +23,14 @@ public class CalculatorTest {
     }
     
     @Test
-    public void subtract() {
-        int result = calculator.subtract(5, 3);
+    public void substract() {
+        int result = calculator.substract(5, 3);
         assertEquals(2, result);
     }
     
+    @Test
+    public void substractReturningNegative() {
+        int result = calculator.substract(3, 5);
+        assertEquals(-2, result);
+    }
 }
