@@ -25,8 +25,12 @@ public class Calculator {
         upperLimit = maxValue;
     }
     
-    
     public int add(int arg1, int arg2) {
+        if(arg1 > upperLimit) {
+            throw new ArithmeticException("Upper limit exceeded");
+        }else if(arg2 < lowerLimit) {
+            throw new ArithmeticException("Second argument exceeds lower limit");
+        }
         int result = arg1 + arg2;
         if(result > upperLimit) {
             throw new ArithmeticException("Upper limit exceeded");
