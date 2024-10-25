@@ -26,12 +26,15 @@ public class CalculatorTest {
     
     @Test
     public void substract() {
+        calculator.setUpperLimit(10);
+        calculator.setLowerLimit(-10);
         int result = calculator.substract(5, 3);
         assertEquals(2, result);
     }
     
     @Test
     public void substractReturningNegative() {
+        calculator.setUpperLimit(10);
         calculator.setLowerLimit(-10);
         int result = calculator.substract(3, 5);
         assertEquals(-2, result);
