@@ -26,6 +26,7 @@ public class Calculator {
     }
     
     public int add(int arg1, int arg2) {
+        int result = arg1 + arg2;
         if(arg1 > upperLimit) {
             throw new ArithmeticException(
             "First argument exceeded upper limit");
@@ -38,9 +39,7 @@ public class Calculator {
         }else if(arg2 > upperLimit) {
             throw new ArithmeticException(
             "Second argument exceeds upper limit");
-        }
-        int result = arg1 + arg2;
-        if(result > upperLimit) {
+        }else if(result > upperLimit) {
             throw new ArithmeticException(
             "Upper limit exceeded");
         }
@@ -48,6 +47,7 @@ public class Calculator {
     }
     
     public int substract(int arg1, int arg2) {
+        int result = arg1 - arg2;
         if(arg1 > upperLimit) {
             throw new ArithmeticException(
             "First argument exceeded upper limit");
@@ -60,9 +60,7 @@ public class Calculator {
         }else if(arg2 > upperLimit) {
             throw new ArithmeticException(
             "Second argument exceeds upper limit");
-        }
-        int result = arg1 - arg2;
-        if(result > upperLimit) {
+        }else if(result > upperLimit) {
             throw new ArithmeticException(
             "Upper limit exceeded");
         }
