@@ -65,4 +65,15 @@ public class CalculatorTest {
         assertEquals(100, calculator.getUpperLimit());
         assertEquals(-100, calculator.getLowerLimit());
     }
+    
+    @Test
+    public void addExcedingUpperLimit() {
+        Calculator calculator = new Calculator(-100, 100);
+        try{
+            int result = calculator.add(10, 150);
+            fail("This should fail: we're exceding upper limit");
+        }catch(ArithmeticException e) {
+            //Ok, the SUT works as expected
+        }
+    }
 }
