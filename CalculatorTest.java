@@ -89,4 +89,15 @@ public class CalculatorTest {
             //OK, this works
         }
     }
+    
+    @Test
+    public void argumentsExceedLimitsInverse() {
+        Calculator calculator = new Calculator(-100, 100);
+        try{
+            calculator.add(calculator.getLowerLimit() -1, calculator.getUpperLimit() +1);
+            fail("This should fail: arguments exceed limits");
+        }catch(ArithmeticException e) {
+            // Ok, this works
+        }
+    }
 }
