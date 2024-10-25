@@ -16,4 +16,6 @@ comment7.params=arg1\ arg2
 comment7.target=int\ add(int,\ int)
 comment8.params=arg1\ arg2
 comment8.target=int\ substract(int,\ int)
-numComments=9
+comment9.params=arg1\ arg2
+comment9.target=boolean\ validateArgs(int,\ int)
+numComments=10
