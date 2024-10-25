@@ -27,13 +27,22 @@ public class Calculator {
     
     public int add(int arg1, int arg2) {
         if(arg1 > upperLimit) {
-            throw new ArithmeticException("Upper limit exceeded");
+            throw new ArithmeticException(
+            "First argument exceeded upper limit");
         }else if(arg2 < lowerLimit) {
-            throw new ArithmeticException("Second argument exceeds lower limit");
+            throw new ArithmeticException(
+            "Second argument exceeds lower limit");
+        }else if(arg1 < lowerLimit) {
+            throw new ArithmeticException(
+            "First argument exceeds lower limit");
+        }else if(arg2 > upperLimit) {
+            throw new ArithmeticException(
+            "Second argument exceeds upper limit");
         }
         int result = arg1 + arg2;
         if(result > upperLimit) {
-            throw new ArithmeticException("Upper limit exceeded");
+            throw new ArithmeticException(
+            "Upper limit exceeded");
         }
         return result;
     }
