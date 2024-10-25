@@ -27,12 +27,16 @@ public class Calculator {
     
     
     public int add(int arg1, int arg2) {
-        return arg1 + arg2;
+        int result = arg1 + arg2;
+        if(result > upperLimit) {
+            throw new ArithmeticException("Upper limit exceeded");
+        }
+        return result;
     }
     
     public int substract(int arg1, int arg2) {
         int result = arg1 - arg2;
-        if(result < lowerLimit){
+        if(result < lowerLimit) {
             throw new ArithmeticException("lower limit exccede");
         }
         return result;

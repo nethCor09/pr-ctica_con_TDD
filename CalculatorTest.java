@@ -12,12 +12,14 @@ public class CalculatorTest {
     
     @Test
     public void add() {
+        calculator.setUpperLimit(10);
         int result = calculator.add(2, 2);
         assertEquals(4, result);
     }
     
     @Test
     public void addWithDifferentArguments() {
+        calculator.setUpperLimit(10);
         int result = calculator.add(2, 5);
         assertEquals(7, result);
     }
