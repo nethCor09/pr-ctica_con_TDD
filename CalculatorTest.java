@@ -30,7 +30,39 @@ public class CalculatorTest {
     
     @Test
     public void substractReturningNegative() {
+        calculator.setLowerLimit(-10);
         int result = calculator.substract(3, 5);
         assertEquals(-2, result);
+    }
+    
+    @Test
+    public void substractSettingLimintValues() {
+        Calculator calculator = new Calculator(-100, 100);
+        int result = calculator.substract(5, 10);
+        assertEquals(-5, result);
+    }
+    
+    @Test
+    public void substractExcedingLowerLimit() {
+        Calculator calculator = new Calculator(-100, 100);
+        try{
+            int result = calculator.substract(10,150);
+            fail("Exception is not being thrown when exceeding lower limit");
+        }catch(ArithmeticException e){
+            // Ok, the SUT works as expected
+        }
+    }
+    
+    @Test
+    public void setAndGetUpperLimt() {
+        Calculator calculator = new Calculator(-100, 100);
+        assertEquals(100, calculator.getUpperLimit());
+    }
+    
+    @Test
+    public void setAndGetLimit() {
+        Calculator calculator = new Calculator(-100, 100);
+        assertEquals(100, calculator.getUpperLimit());
+        assertEquals(-100, calculator.getLowerLimit());
     }
 }
