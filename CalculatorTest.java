@@ -78,4 +78,15 @@ public class CalculatorTest {
             //Ok, the SUT works as expected
         }
     }
+    
+    @Test
+    public void argumentsExceedLimits() {
+        Calculator calculator = new Calculator(-100, 100);
+        try{
+            calculator.add(calculator.getUpperLimit() +1, calculator.getLowerLimit() -1);
+            fail("This should fail: arguments exceed limits");
+        }catch(ArithmeticException e) {
+            //OK, this works
+        }
+    }
 }
