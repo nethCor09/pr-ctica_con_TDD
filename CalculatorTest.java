@@ -86,7 +86,8 @@ public class CalculatorTest {
     public void argumentsExceedLimits() {
         Calculator calculator = new Calculator(-100, 100);
         try{
-            calculator.add(calculator.getUpperLimit() +1, calculator.getLowerLimit() -1);
+            calculator.validateArgs(
+                calculator.getUpperLimit() +1, calculator.getLowerLimit() -1);
             fail("This should fail: arguments exceed limits");
         }catch(ArithmeticException e) {
             //OK, this works
@@ -97,7 +98,8 @@ public class CalculatorTest {
     public void argumentsExceedLimitsInverse() {
         Calculator calculator = new Calculator(-100, 100);
         try{
-            calculator.add(calculator.getLowerLimit() -1, calculator.getUpperLimit() +1);
+            calculator.validateArgs(
+                calculator.getLowerLimit() -1, calculator.getUpperLimit() +1);
             fail("This should fail: arguments exceed limits");
         }catch(ArithmeticException e) {
             // Ok, this works
@@ -108,7 +110,8 @@ public class CalculatorTest {
     public void argumentsExceedLimitsOnSubstract() {
         Calculator calculator = new Calculator(-100, 100);
         try{
-            calculator.substract(calculator.getUpperLimit() +1, calculator.getLowerLimit() -1);
+            calculator.substract(
+                calculator.getUpperLimit() +1, calculator.getLowerLimit() -1);
             fail("This should fail: arguments exceed limits");
         }catch(ArithmeticException e) {
             //Ok, this works
